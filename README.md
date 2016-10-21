@@ -34,7 +34,7 @@ That volume has the following structure:
 
 To use this image include `FROM rawmind/rancher-tools` at the top of your `Dockerfile`, add templates and conf.d files from your service.
 
-Starting from `rawmind/rancher-tools` provides you with the ability to easily get dinamic configuration using confd. confd will also keep running checking for config changes, restarting your service.
+Starting from `rawmind/rancher-tools` provides you with the ability to easily get dynamic configuration using confd. confd will also keep running checking for config changes, restarting your service.
 
 This image has to be started once as a sidekick of your service (based in alpine-monit), exporting a /opt/tools volume to it. It adds monit conf.d to start confd with a default parameters, that you can overwrite with environment variables.
 
