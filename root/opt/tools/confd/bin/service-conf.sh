@@ -11,16 +11,16 @@ function checkNetwork {
     a="`ip a s dev eth0 &> /dev/null; echo $?`"
     while  [ $a -eq 1 ];
     do
-        a="`ip a s dev eth0 &> /dev/null; echo $?`" 
+        a="`ip a s dev eth0 &> /dev/null; echo $?`"
         sleep 1
     done
 
     log "[ Checking container connectivity... ]"
     b="`fping -c 1 rancher-metadata.rancher.internal &> /dev/null; echo $?`"
-    while [ $b -eq 1 ]; 
+    while [ $b -eq 1 ];
     do
         b="`fping -c 1 rancher-metadata.rancher.internal &> /dev/null; echo $?`"
-        sleep 1 
+        sleep 1
     done
 }
 
@@ -37,7 +37,7 @@ function serviceStop {
 
 function serviceRestart {
     log "[ Restarting ${CONF_NAME}... ]"
-    serviceStop 
+    serviceStop
     serviceStart
     /opt/monit/bin/monit reload
 }

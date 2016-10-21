@@ -17,12 +17,12 @@ That volume has the following structure:
 
 ```
 |- /opt/tools
-|-|- confd 	# Confd directory
+|-|- confd  # Confd directory
 |-|-|- etc
 |-|-|-|- templates
 |-|-|-|- conf.d
 |-|-|- bin/service-conf.sh          # Confd script to start stop or restart confd with rancher config
-|-|- monit/conf.d/monit-conf.cfg  	# Confd start script for monit
+|-|- monit/conf.d/monit-conf.cfg    # Confd start script for monit
 ```
 
 
@@ -60,4 +60,3 @@ An example of using this image can be found in the [rawmind/rancher-traefik][ran
 
 [rancher-traefik]: https://github.com/rawmind0/rancher-traefik
 [alpine-tools]: https://github.com/rawmind0/alpine-tools
-
